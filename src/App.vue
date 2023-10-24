@@ -211,7 +211,7 @@
 
 </style>
 <template>
-  <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 && checkClass == '' ? 'warm' : ''">
+  <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 25 && checkClass == '' ? 'warm' : ''">
     <main>
       <div class="search-box">
         <input type="text" v-model="search" class="search-bar" placeholder="Search..." @keypress="fetchWeather" />
