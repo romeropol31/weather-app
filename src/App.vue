@@ -248,8 +248,8 @@ export default {
     checkClass(){
       if(!this.weather)return '';
       if(typeof this.weather.main != 'undefined'){
-        if(this.weather.weather[0].description == 'thunderstorm')return 'thunderstorm';
-        if(this.weather.weather[0].description == 'snow')return 'snow';
+        if(this.weather.weather[0].description.includes('thunderstorm'))return 'thunderstorm';
+        if(this.weather.weather[0].description.includes('snow'))return 'snow';
         if(this.weather.weather[0].description.includes('rain'))return 'rain';
       }
       return '';
